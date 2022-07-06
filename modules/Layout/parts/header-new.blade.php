@@ -1,6 +1,6 @@
-<div id="page">
+
    <header class="header menu_fixed">
-      <!-- <div id="preloader"><div data-loader="circle-side"></div></div>/Page Preload -->
+      <div id="preloader"><div data-loader="circle-side"></div></div>/Page Preload
       <div id="logo">
          <a href="../">
             @php
@@ -11,20 +11,20 @@
             @endphp
             @if($logo_id)
             <?php $logo = get_file_url($logo_id,'full') ?>
-            <img src="{{$logo}}" alt="" class="logo_normal">
-            <img src="{{$logo}}" alt="" class="logo_sticky">
+            <img src="{{$logo}}" alt="" class="logo_normal" width="180" height="80">
+            <img src="{{$logo}}" alt="" class="logo_sticky" width="150" height="60">
             @endif
          </a>
       </div>
       <ul id="top_menu">
 
          @if(!Auth::id())
-         <li class="login-item">
+         <li class="login-item dropdown">
             <a href="#sign-in-dialog" id="sign-in" data-target="#login" class="login">{{__('Login')}}</a>
          </li>
          <!-- data-toggle="modal" data-target="#login" -->
          @else
-         <li class="login-item dropdown">
+         <li class="login-item ">
             <a href="#" class="is_login nav-link dropdown-toggle d-flex align-items-center" id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown" aria-expanded="false">
                @if($avatar_url = Auth::user()->getAvatarUrl())
                <img class="avatar rounded-circle shadow-4" src="{{$avatar_url}}" width="40"
@@ -85,4 +85,3 @@
       </nav>
    </header>
    <!-- /header -->
-</div>

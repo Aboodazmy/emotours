@@ -1,7 +1,39 @@
 /*============================================================================================*/
 /* Your custom styles below */
 /*============================================================================================*/
-.bravo_wrap .page-template-content .bravo-list-locations.style_4 .list-item .destination-item {
+/* .bravo-list-locations .list-item .destinations {
 
-border-radius: 25px !important;
-}
+
+position: relative;
+min-height: 383px;
+
+
+
+overflow: hidden;
+} */
+
+
+/* .bravo-list-locations .list-item .destinations .effect {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+    transition: all .3s;
+} */
+
+/* .bravo-list-locations .list-item .destinations .image .content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-align: center;
+} */
+
+
+

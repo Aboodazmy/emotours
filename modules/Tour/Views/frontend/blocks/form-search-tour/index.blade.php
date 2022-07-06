@@ -8,4 +8,7 @@
     @if($style == "carousel_v3")
         @include("Tour::frontend.blocks.form-search-tour.style-hero-new")
     @endif
+    @if($style == "carousel_v4")
+        @include("Tour::frontend.blocks.form-search-tour.style-hero-new2")
+    @endif
 </div>

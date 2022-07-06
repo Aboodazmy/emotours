@@ -123,6 +123,19 @@
 		closeMarkup: '<button title="%title%" type="button" class="mfp-close"></button>',
 		mainClass: 'my-mfp-zoom-in'
 	});
+	// Modal Sign Up
+	$('#sign-up').magnificPopup({
+		type: 'inline',
+		fixedContentPos: true,
+		fixedBgPos: true,
+		overflowY: 'auto',
+		closeBtnInside: true,
+		preloader: false,
+		midClick: true,
+		removalDelay: 300,
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close"></button>',
+		mainClass: 'my-mfp-zoom-in'
+	});
 
 	// Modal generic
 	$('#modal').magnificPopup({

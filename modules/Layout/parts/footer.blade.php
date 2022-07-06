@@ -11,7 +11,7 @@
             @endphp
             @if($logo_id)
             <?php $logo = get_file_url($logo_id,'full') ?>
-					<p><img src="{{$logo}}" width="150" height="36" alt=""></p> @endif
+					<p><img src="{{$logo}}" width="150" height="60" alt=""></p> @endif
 					<p>Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea. Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu. Nihil facilisi indoctum an vix, ut delectus expetendis vis.</p>
 					<div class="follow_us">
 						<ul>
@@ -105,7 +105,6 @@
 @endif
 <div id="toTop"></div><!-- Back to top button -->
 
-
 @include('Layout::parts.login-register-modal')
 @include('Layout::parts.chat')
 @if(Auth::id())
@@ -135,30 +134,22 @@
 <script src="{{ asset('libs/lodash.min.js') }}"></script>
 <script src="{{ asset('libs/jquery-3.3.1.min.js') }}"></script>
 <script src="{{ asset('libs/vue/vue'.(!env('APP_DEBUG') ? '.min':'').'.js') }}"></script>
-<script src="{{ asset('panagea/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('libs/bootbox/bootbox.min.js') }}"></script>
 @if(Auth::id())
 	<script src="{{ asset('module/media/js/browser.js?_ver='.config('app.version')) }}"></script>
 @endif
 <script src="{{ asset('libs/carousel-2/owl.carousel.min.js') }}"></script>
-<!-- <script type="text/javascript" src="{{ asset("libs/daterange/moment.min.js") }}"></script> -->
-<!-- <script type="text/javascript" src="{{ asset("libs/daterange/daterangepicker.min.js") }}"></script> -->
+<script type="text/javascript" src="{{ asset("libs/daterange/moment.min.js") }}"></script>
+<script type="text/javascript" src="{{ asset("libs/daterange/daterangepicker.min.js") }}"></script>
 <script src="{{ asset('libs/select2/js/select2.min.js') }}"></script>
 <script src="{{ asset('js/functions.js?_ver='.config('app.version')) }}"></script>
 
 <!-- custom new sctipts  -->
-
-<!-- COMMON SCRIPTS -->
-<!-- <script src="{{ asset('panagea/js/common_scripts.js') }}"></script>
-<script src="{{ asset('panagea/panagea/js/main.js') }}"></script>
- <script src="{{ asset('panagea/assets/validate.js') }}"></script> -->
-
 <script src="../panagea/js/common_scripts.js"></script>
 <script src="../panagea/js/main.js"></script>
 <script src="../panagea/assets/validate.js"></script>
 <script src="../panagea/js/input_qty.js"></script>
-
-
 <!-- SPECIFIC SCRIPTS -->
 
 <script src="../panagea/js/jarallax.min.js"></script>

@@ -30,6 +30,8 @@ Author URI: http://themeforest.net/user/Ansonika/
 - 2.16 OpenStreet Map
 - 2.17 Parallax Video Background
 - 2.18 Other Headers
+- 2.19 Locations
+
 
 3. COMMON
 - 3.1 Misc
@@ -5547,7 +5549,7 @@ ul.cart_details li span {
 }
 #confirm p {
   font-size: 16px !important;
-  font-size: 16px !important/16pxrem;
+  font-size: 16px !important;
   margin-bottom: 0;
 }
 
@@ -6406,15 +6408,15 @@ ul.list_feat li p {
 /*-------- 2.13 Home AirBnb --------*/
 /* Home single hero */
 .hero_single.version_3 {
-  height: 690px;
+  height: 650px;
 }
-.hero_single.version_3:before {
+/* .hero_single.version_3:before {
   background: url(../img/home_section_3.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 .hero_single.version_3 .wrapper {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.45);
@@ -7536,7 +7538,7 @@ a.address:hover {
 
 /*-------- 2.17 Parallax Video Background --------*/
 .hero_single.jarallax {
-  height: 650px;
+  /* height: 600px; */
 }
 .hero_single.jarallax .wrapper h3 {
   font-size: 42px;
@@ -7652,6 +7654,9 @@ a.btn_explore:hover {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
+
+/* locations list start  */
+
 /*============================================================================================*/
 /* 3.  COMMON */
 /*============================================================================================*/

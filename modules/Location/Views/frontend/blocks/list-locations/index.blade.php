@@ -9,13 +9,13 @@
             </div>
         @endif
         @if(!empty($rows))
-            <div class="list-item swiper-locations p-4">
-                <div class="row swiper-wrapper">
+            <div class="list-item">
+                <div class="row">
                     @foreach($rows as $key=>$row)
                         <?php
-                        $size_col = 3;
+                        $size_col = 4;
                         if( !empty($layout) and (  $layout == "style_2" or $layout == "style_3" or $layout == "style_4" )){
-                            $size_col = 3;
+                            $size_col = 4;
                         }else{
                             if($key == 0){
                                 $size_col = 8;

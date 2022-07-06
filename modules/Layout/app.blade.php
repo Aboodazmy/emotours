@@ -21,17 +21,23 @@
     @endif
 
     @include('Layout::parts.seo-meta')
-    <link href="{{ asset('panagea/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('libs/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
     <link href="{{ asset('libs/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ asset('libs/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('libs/icofont/icofont.min.css') }}" rel="stylesheet">
     <link href="{{ asset('libs/select2/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('dist/frontend/css/notification.css') }}" rel="newest stylesheet">
     <link href="{{ asset('dist/frontend/css/app.css?_ver='.config('app.version')) }}" rel="stylesheet">
-    <!-- <link rel="stylesheet" type="text/css" href="{{ asset("libs/daterange/daterangepicker.css") }}" > -->
+
+    <link rel="stylesheet" type="text/css" href="{{ asset("libs/daterange/daterangepicker.css") }}" >
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel='stylesheet' id='google-font-css-css'  href='https://fonts.googleapis.com/css?family=Poppins%3A300%2C400%2C500%2C600' type='text/css' media='all' />
+
+    <!-- custom css pan  -->
+	<link rel="stylesheet" href="{{ asset('panagea/css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('panagea/css/vendors.css') }}">
+<!-- end custom css pan  -->
 
     {!! \App\Helpers\Assets::css() !!}
     {!! \App\Helpers\Assets::js() !!}
@@ -79,52 +85,44 @@
             warning:"{{__("Warning")}}",
             success:"{{__("Success")}}",
         };
-        var daterangepickerLocale = {
-            "applyLabel": "{{__('Apply')}}",
-            "cancelLabel": "{{__('Cancel')}}",
-            "fromLabel": "{{__('From')}}",
-            "toLabel": "{{__('To')}}",
-            "customRangeLabel": "{{__('Custom')}}",
-            "weekLabel": "{{__('W')}}",
-            "first_day_of_week": {{ setting_item("site_first_day_of_the_weekin_calendar","1") }},
-            "daysOfWeek": [
-                "{{__('Su')}}",
-                "{{__('Mo')}}",
-                "{{__('Tu')}}",
-                "{{__('We')}}",
-                "{{__('Th')}}",
-                "{{__('Fr')}}",
-                "{{__('Sa')}}"
-            ],
-            "monthNames": [
-                "{{__('January')}}",
-                "{{__('February')}}",
-                "{{__('March')}}",
-                "{{__('April')}}",
-                "{{__('May')}}",
-                "{{__('June')}}",
-                "{{__('July')}}",
-                "{{__('August')}}",
-                "{{__('September')}}",
-                "{{__('October')}}",
-                "{{__('November')}}",
-                "{{__('December')}}"
-            ],
-        };
+        // var daterangepickerLocale = {
+        //     "applyLabel": "{{__('Apply')}}",
+        //     "cancelLabel": "{{__('Cancel')}}",
+        //     "fromLabel": "{{__('From')}}",
+        //     "toLabel": "{{__('To')}}",
+        //     "customRangeLabel": "{{__('Custom')}}",
+        //     "weekLabel": "{{__('W')}}",
+        //     "first_day_of_week": {{ setting_item("site_first_day_of_the_weekin_calendar","1") }},
+        //     "daysOfWeek": [
+        //         "{{__('Su')}}",
+        //         "{{__('Mo')}}",
+        //         "{{__('Tu')}}",
+        //         "{{__('We')}}",
+        //         "{{__('Th')}}",
+        //         "{{__('Fr')}}",
+        //         "{{__('Sa')}}"
+        //     ],
+        //     "monthNames": [
+        //         "{{__('January')}}",
+        //         "{{__('February')}}",
+        //         "{{__('March')}}",
+        //         "{{__('April')}}",
+        //         "{{__('May')}}",
+        //         "{{__('June')}}",
+        //         "{{__('July')}}",
+        //         "{{__('August')}}",
+        //         "{{__('September')}}",
+        //         "{{__('October')}}",
+        //         "{{__('November')}}",
+        //         "{{__('December')}}"
+        //     ],
+        // };
     </script>
     <!-- Styles -->
     @yield('head')
     {{--Custom Style--}}
-    <!-- <link href="{{ route('core.style.customCss') }}" rel="stylesheet"> -->
+    <link href="{{ route('core.style.customCss') }}" rel="stylesheet">
     <link href="{{ asset('libs/carousel-2/owl.carousel.css') }}" rel="stylesheet">
-
-    <!-- custom css pan  -->
-	<link rel="stylesheet" href="{{ asset('panagea/css/style.css') }}">
-	<link rel="stylesheet" href="{{ asset('panagea/css/vendors.css') }}">
-    <link rel="stylesheet" href="{{ asset('panagea/css/custom.css') }}">
-
-<!-- end custom css pan  -->
-
     @if(setting_item_with_lang('enable_rtl'))
         <link href="{{ asset('dist/frontend/css/rtl.css') }}" rel="stylesheet">
     @endif
@@ -143,10 +141,10 @@
         {!! setting_item('body_scripts') !!}
         {!! setting_item_with_lang_raw('body_scripts') !!}
     @endif
-    <div class="bravo_wrap" >
+    <div class="bravo_wrap" id="page">
         @if(!is_api())
             <!-- @include('Layout::parts.topbar') -->
-            @include('Layout::parts.header-new')
+            @include('Layout::parts.header-new-2')
         @endif
 
         @yield('content')

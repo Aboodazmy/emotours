@@ -39,6 +39,14 @@ class FormSearchTour extends BaseBlock
                         [
                             'value'   => 'carousel_v2',
                             'name' => __("Slider Carousel Ver 2")
+                        ],
+                        [
+                            'value'   => 'carousel_v3',
+                            'name' => __("Slider Carousel Ver 3")
+                        ],
+                        [
+                            'value'   => 'carousel_v4',
+                            'name' => __("Slider Carousel Ver 4")
                         ]
                     ]
                 ],

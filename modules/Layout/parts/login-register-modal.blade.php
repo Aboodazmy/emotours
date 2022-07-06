@@ -10,7 +10,7 @@
                 </span>
             </div>
             <div class="modal-body relative">
-                @include('Layout::auth/login-form-new')
+                @include('Layout::auth/login-form')
             </div>
         </div>
     </div>
